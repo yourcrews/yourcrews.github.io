@@ -6,7 +6,8 @@ const nextConfig = {
         unoptimized: true
     },
     basePath: process.env.NODE_ENV === 'production' ? '/landing_page' : '',
-    assetPrefix: process.env.NODE_ENV === 'production' ? '/landing_page/' : ''
+    assetPrefix: process.env.NODE_ENV === 'production' ? '/landing_page' : '',
+    trailingSlash: true
 }
 
 module.exports = nextConfig
