@@ -8,6 +8,15 @@ import Rails from "@/common/component/element/Rails";
 const BlogDetail = () => {
   const pathname = usePathname();
   const blog = BlogContent.find((item) => `/blog/${item.slug}` === pathname);
+
+  if (!blog) {
+    return (
+      <div className="h-screen flex items-center justify-center">
+        <h1 className="text-2xl">Blog post not found</h1>
+      </div>
+    );
+  }
+
   return (
     <div className="h-auto max-w-[1500px] flex flex-col items-center justify-center mt-20 max-md:px-5 px-10 xl:px-20 pb-10 overflow-hidden">
       <div className="flex justify-center mt-20 relative">
